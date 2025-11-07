@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Furniture Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">FURNITURE</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <div class="nav-icons ms-3">
+                    <button class="btn btn-outline-light me-2 wishlist-icon">♡</button>
+                    <button class="btn btn-outline-light cart-icon">🛒</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container">
+            <header class="text-center my-5">
+                <h1 class="page-heading">Our Products</h1>
+            </header>
+
+            <div class="top-bar mb-4">
+                <div class="row g-3 align-items-center">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control search-input" placeholder="Search products..." id="searchInput">
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select filter-select" id="brandFilter">
+                            <option value="">All Brands</option>
+                            <option value="wayfair">Wayfair</option>
+                            <option value="ikea">IKEA</option>
+                            <option value="ashley">Ashley</option>
+                            <option value="la-z-boy">La-Z-Boy</option>
+                            <option value="pottery-barn">Pottery Barn</option>
+                            <option value="west-elm">West Elm</option>
+                            <option value="crate-barrel">Crate & Barrel</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select filter-select" id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="sofa">Sofas</option>
+                            <option value="recliner">Recliners</option>
+                            <option value="sectional">Sectionals</option>
+                            <option value="loveseat">Loveseats</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select class="form-select filter-select" id="typeFilter">
+                            <option value="">All Types</option>
+                            <option value="recliner">Recliner</option>
+                            <option value="sofa-cum-bed">Sofa Cum Bed</option>
+                            <option value="leather">Leather</option>
+                            <option value="massage">Massage</option>
+                            <option value="sectional">Sectional</option>
+                            <option value="fabric">Fabric</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <select class="form-select sort-select" id="sortSelect">
+                            <option value="popularity">Sort by: Popularity</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest First</option>
+                            <option value="rating">Best Rated</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products-container">
+                <div class="row g-4 products-grid" id="productsGrid">
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="wayfair" 
+                         data-category="sofa" 
+                         data-type="fabric,sectional" 
+                         data-price="899.99" 
+                         data-rating="4.5" 
+                         data-popularity="95">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" class="card-img-top" alt="Wayfair Modern Sectional">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Wayfair Modern Sectional</h5>
+                                <p class="card-text product-description">Contemporary fabric sectional with chaise lounge, perfect for family rooms.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$899.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.5/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="ikea" 
+                         data-category="sofa" 
+                         data-type="sofa-cum-bed,fabric" 
+                         data-price="649.99" 
+                         data-rating="4.3" 
+                         data-popularity="88">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=300&fit=crop" class="card-img-top" alt="IKEA Convertible Sofa">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">IKEA Convertible Sofa</h5>
+                                <p class="card-text product-description">Space-saving sofa bed with modern design and easy conversion mechanism.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$649.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.3/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="ashley" 
+                         data-category="recliner" 
+                         data-type="recliner,leather,massage" 
+                         data-price="1299.99" 
+                         data-rating="4.7" 
+                         data-popularity="92">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=400&h=300&fit=crop" class="card-img-top" alt="Ashley Massage Recliner">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Ashley Massage Recliner</h5>
+                                <p class="card-text product-description">Premium leather recliner with built-in massage and heating functions.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$1299.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.7/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="la-z-boy" 
+                         data-category="recliner" 
+                         data-type="recliner,leather" 
+                         data-price="1599.99" 
+                         data-rating="4.9" 
+                         data-popularity="98">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=300&fit=crop" class="card-img-top" alt="La-Z-Boy Executive Recliner">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">La-Z-Boy Executive Recliner</h5>
+                                <p class="card-text product-description">Classic leather recliner with premium comfort and timeless design.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$1599.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.9/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="pottery-barn" 
+                         data-category="sectional" 
+                         data-type="sectional,fabric" 
+                         data-price="2499.99" 
+                         data-rating="4.8" 
+                         data-popularity="96">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1519947486511-46149fa0b254?w=400&h=300&fit=crop" class="card-img-top" alt="Pottery Barn Chesterfield Sectional">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Pottery Barn Chesterfield</h5>
+                                <p class="card-text product-description">Elegant tufted sectional with premium fabric and classic design.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$2499.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.8/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="west-elm" 
+                         data-category="sofa" 
+                         data-type="leather,sectional" 
+                         data-price="2199.99" 
+                         data-rating="4.6" 
+                         data-popularity="91">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=400&h=300&fit=crop" class="card-img-top" alt="West Elm Mid-Century Sofa">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">West Elm Mid-Century</h5>
+                                <p class="card-text product-description">Mid-century modern leather sofa with walnut legs and clean lines.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$2199.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.6/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="crate-barrel" 
+                         data-category="loveseat" 
+                         data-type="fabric" 
+                         data-price="1299.99" 
+                         data-rating="4.7" 
+                         data-popularity="89">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1601760561441-16420502c7e0?w=400&h=300&fit=crop" class="card-img-top" alt="Crate & Barrel Lounge Loveseat">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Crate & Barrel Lounge Loveseat</h5>
+                                <p class="card-text product-description">Compact loveseat with premium fabric and deep seating comfort.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$1299.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.7/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="wayfair" 
+                         data-category="recliner" 
+                         data-type="recliner,fabric" 
+                         data-price="599.99" 
+                         data-rating="4.2" 
+                         data-popularity="85">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?w=400&h=300&fit=crop" class="card-img-top" alt="Wayfair Comfort Recliner">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Wayfair Comfort Recliner</h5>
+                                <p class="card-text product-description">Affordable fabric recliner with smooth mechanism and cozy padding.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$599.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.2/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="ikea" 
+                         data-category="sectional" 
+                         data-type="sectional,fabric" 
+                         data-price="799.99" 
+                         data-rating="4.4" 
+                         data-popularity="87">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=300&fit=crop" class="card-img-top" alt="IKEA Modular Sectional">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">IKEA Modular Sectional</h5>
+                                <p class="card-text product-description">Modular fabric sectional with washable covers and customizable layout.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$799.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.4/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="ashley" 
+                         data-category="sofa" 
+                         data-type="leather" 
+                         data-price="1499.99" 
+                         data-rating="4.5" 
+                         data-popularity="90">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1634629370316-8a8bcb3c94c5?w=400&h=300&fit=crop" class="card-img-top" alt="Ashley Leather Sofa">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Ashley Leather Sofa</h5>
+                                <p class="card-text product-description">Genuine leather sofa with nailhead trim and classic design.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$1499.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.5/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="la-z-boy" 
+                         data-category="sectional" 
+                         data-type="sectional,recliner" 
+                         data-price="3299.99" 
+                         data-rating="4.9" 
+                         data-popularity="97">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400&h=300&fit=crop" class="card-img-top" alt="La-Z-Boy Reclining Sectional">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">La-Z-Boy Reclining Sectional</h5>
+                                <p class="card-text product-description">Premium sectional with multiple reclining seats and cup holders.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$3299.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.9/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6 product-card" 
+                         data-brand="pottery-barn" 
+                         data-category="loveseat" 
+                         data-type="fabric,sofa-cum-bed" 
+                         data-price="1599.99" 
+                         data-rating="4.6" 
+                         data-popularity="86">
+                        <div class="card h-100 product-card">
+                            <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400&h=300&fit=crop" class="card-img-top" alt="Pottery Barn Sleeper Loveseat">
+                            <div class="card-body">
+                                <h5 class="card-title product-title">Pottery Barn Sleeper Loveseat</h5>
+                                <p class="card-text product-description">Compact loveseat that converts to single bed with premium mattress.</p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="product-price">$1599.99</span>
+                                    <div class="product-rating">
+                                        <small>★ 4.6/5</small>
+                                    </div>
+                                </div>
+                                <div class="product-actions">
+                                    <button class="btn wishlist-btn" aria-label="Add to wishlist">♡</button>
+                                    <button class="btn add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="no-products text-center py-5" id="noProducts" style="display: none;">
+                    <p class="product-description">No products found matching your criteria.</p>
+                    <button class="btn btn-outline-dark" onclick="clearAllFilters()">Clear Filters</button>
+                </div>
+            </div>
+
+            <nav aria-label="Product pagination" class="mt-5">
+                <ul class="pagination justify-content-center" id="pagination">
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <footer class="custom-footer py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 Furniture Store. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link me-3">Terms of Service</a>
+                    <a href="#" class="footer-link">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/product.js"></script>
+</body>
+</html>

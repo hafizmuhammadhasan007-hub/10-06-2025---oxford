@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chairs — Urban Sofa</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <!-- Page CSS -->
+  <link rel="stylesheet" href="./css/chair/chair.css">
+</head>
+<body>
+
+  <!-- ====== NAVBAR (constant) ====== -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">URBAN SOFA</a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto">
+
+        <!-- Home -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <!-- Products Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="sofa.html">Sofas</a></li>
+            <li><a class="dropdown-item" href="products.html?category=chairs">Chairs</a></li>
+            <li><a class="dropdown-item" href="products.html?category=tables">Tables</a></li>
+            <li><a class="dropdown-item" href="products.html?category=beds">Beds</a></li>
+            <li><a class="dropdown-item" href="products.html?category=outdoor">Outdoor</a></li>
+          </ul>
+        </li>
+
+        <!-- Brands Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="brands.html" id="brandsDropdown" role="button" data-bs-toggle="dropdown">
+            Brands
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="products.html?brand=ikea">IKEA</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=ashley">Ashley Furniture</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=lazboy">La-Z-Boy</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=wayfair">Wayfair</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=potterybarn">Pottery Barn</a></li>
+          </ul>
+        </li>
+
+        <!-- Compare -->
+        <li class="nav-item">
+          <a class="nav-link" href="compare.html">Compare</a>
+        </li>
+
+        <!-- About Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html#company">Company Intro</a></li>
+            <li><a class="dropdown-item" href="about.html#types">Sofa Types</a></li>
+            <li><a class="dropdown-item" href="about.html#location">Shop Location</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+        <!-- Feedback -->
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Feedback</a>
+        </li>
+      </ul>
+
+      <!-- Right Side Icons -->
+      <div class="navbar-icons d-flex">
+        <a href="wishlist.html" class="nav-icon"><i class="fas fa-heart"></i></a>
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+  <!-- ====== HERO ====== -->
+  <section class="chair-hero text-center">
+    <div class="container">
+      <h1 class="display-5 fw-bold" data-aos="fade-down">Explore Our Chairs</h1>
+      <p class="lead" data-aos="fade-up" data-aos-delay="150">Comfortable, stylish & durable — options for every space.</p>
+    </div>
+  </section>
+
+  <!-- gap between hero and filter -->
+  <div class="spacer"></div>
+
+  <!-- ====== FILTER / SEARCH / SORT (centered & compact) ====== -->
+  <section class="filter-bar py-3">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
+        <!-- Search -->
+        <div class="search-wrap" data-aos="fade-right">
+          <input id="search" class="form-control search-box" type="text" placeholder="Search chairs..." />
+        </div>
+
+        <!-- Brand -->
+        <div class="select-wrap" data-aos="fade-up">
+          <select id="brand" class="form-select select-pill">
+            <option value="">All Brands</option>
+            <option value="ikea">IKEA</option>
+            <option value="ashley">Ashley Furniture</option>
+            <option value="lazboy">La-Z-Boy</option>
+            <option value="wayfair">Wayfair</option>
+            <option value="potterybarn">Pottery Barn</option>
+          </select>
+        </div>
+
+        <!-- Sort -->
+        <div class="select-wrap" data-aos="fade-left">
+          <select id="sort" class="form-select select-pill">
+            <option value="popularity">Sort: Popularity</option>
+            <option value="low-high">Price: Low → High</option>
+            <option value="high-low">Price: High → Low</option>
+            <option value="newest">Newest</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== PRODUCTS (5 chairs provided) ====== -->
+<!-- ====== CHAIRS SECTION ====== -->
+<section class="products py-5">
+  <div class="container">
+    <h2 class="text-center mb-4" data-aos="fade-up">Chairs Collection</h2>
+
+    <div class="row g-4" id="productsRow">
+
+      <!-- ================== IKEA CHAIRS (5 CARDS) ================== -->
+
+      <!-- IKEA Chair 1 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="50">
+        <div class="product-card" data-brand="ikea" data-price="45000" data-date="2025-01-10">
+          <span class="tag">Best Seller</span>
+
+          <div class="product-image">
+            <img src="./images of products/ikea chair 1/product1.jpg" alt="IKEA Chair 1" class="main-img">
+            <img src="./images of products/ikea chair 1/product2.jpg" alt="IKEA Chair 1 Hover" class="hover-img">
+          </div>
+
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+
+          <h4>IKEA Modern Armchair</h4>
+          <p class="price">PKR 45,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- IKEA Chair 2 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+        <div class="product-card" data-brand="ikea" data-price="52000" data-date="2025-01-12">
+          <span class="tag new">New</span>
+
+          <div class="product-image">
+            <img src="./images of products/ikea chair 2/product 11.jpg" alt="IKEA Chair 2" class="main-img">
+            <img src="./images of products/ikea chair 2/product 12.jpg" alt="IKEA Chair 2 Hover" class="hover-img">
+          </div>
+
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+
+          <h4>IKEA Scandinavian Chair</h4>
+          <p class="price">PKR 52,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- IKEA Chair 3 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
+        <div class="product-card" data-brand="ikea" data-price="38000" data-date="2025-01-14">
+          <span class="tag sale">On Sale</span>
+
+          <div class="product-image">
+            <img src="./images of products/ikea chair 3/product 11.jpg" alt="IKEA Chair 3" class="main-img">
+            <img src="./images of products/ikea chair 3/product 12.jpg" alt="IKEA Chair 3 Hover" class="hover-img">
+          </div>
+
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+
+          <h4>IKEA Wooden Dining Chair</h4>
+          <p class="price">PKR 38,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- IKEA Chair 4 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+        <div class="product-card" data-brand="ikea" data-price="67000" data-date="2025-01-08">
+          <div class="product-image">
+            <img src="./images of products/ikea chair 4/product 11.jpg" alt="IKEA Chair 4" class="main-img">
+            <img src="./images of products/ikea chair 4/product 12.jpg" alt="IKEA Chair 4 Hover" class="hover-img">
+          </div>
+
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+
+          <h4>IKEA Office Chair</h4>
+          <p class="price">PKR 67,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- IKEA Chair 5 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
+        <div class="product-card" data-brand="ikea" data-price="72000" data-date="2025-01-02">
+          <span class="tag featured">Featured</span>
+
+          <div class="product-image">
+            <img src="./images of products/ikea chair 5/product 11.jpg" alt="IKEA Chair 5" class="main-img">
+            <img src="./images of products/ikea chair 5/product 12.jpg" alt="IKEA Chair 5 Hover" class="hover-img">
+          </div>
+
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+
+          <h4>IKEA Lounge Chair</h4>
+          <p class="price">PKR 72,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- ================== IKEA CHAIRS END ================== -->
+
+      <!-- ================== ASHLEY CHAIRS (5 CARDS) ================== -->
+      <!-- Copy IKEA card structure and update:
+           data-brand="ashley"
+           names: "Ashley Classic Armchair", "Ashley Recliner Chair", etc.
+           prices: PKR 55,000 – 90,000
+           image links: https://source.unsplash.com/600x600/?armchair,ashley -->
+
+
+
+
+
+
+
+
+                 <!-- ================== ASHLEY CHAIRS (5 CARDS) ================== -->
+      
+      <!-- Ashley Chair 1 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="product-card" data-brand="ashley" data-price="55000" data-date="2025-01-15">
+          <span class="tag">Best Seller</span>
+          <div class="product-image">
+            <img src="./images of products/ashley chair 1/product 12.webp" alt="Ashley Classic Armchair" class="main-img">
+            <img src="./images of products/ashley chair 1/product 11.webp" alt="Ashley Classic Armchair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Ashley Classic Armchair</h4>
+          <p class="price">PKR 55,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- Ashley Chair 2 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
+        <div class="product-card" data-brand="ashley" data-price="68000" data-date="2025-01-18">
+          <span class="tag new">New</span>
+          <div class="product-image">
+            <img src="./images of products/ashley chair 2/product 12.webp" alt="Ashley Recliner Chair" class="main-img">
+            <img src="./images of products/ashley chair 2/product 11.webp" alt="Ashley Recliner Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Ashley Recliner Chair</h4>
+          <p class="price">PKR 68,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- Ashley Chair 3 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+        <div class="product-card" data-brand="ashley" data-price="45000" data-date="2025-01-05">
+          <span class="tag sale">On Sale</span>
+          <div class="product-image">
+            <img src="./images of products/ashley chair 3/product 12.webp" alt="Ashley Dining Chair" class="main-img">
+            <img src="./images of products/ashley chair 3/product 11.webp" alt="Ashley Dining Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Ashley Dining Chair</h4>
+          <p class="price">PKR 45,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- Ashley Chair 4 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
+        <div class="product-card" data-brand="ashley" data-price="78000" data-date="2025-01-22">
+          <div class="product-image">
+            <img src="./images of products/ashley chair 4/product 11.webp" alt="Ashley Lounge Chair" class="main-img">
+            <img src="./images of products/ashley chair 4/product 12.webp" alt="Ashley Lounge Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Ashley Lounge Chair</h4>
+          <p class="price">PKR 78,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- Ashley Chair 5 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+        <div class="product-card" data-brand="ashley" data-price="90000" data-date="2025-01-25">
+          <span class="tag featured">Featured</span>
+          <div class="product-image">
+            <img src="./images of products/ashley chair 5/product 12.webp" alt="Ashley Accent Chair" class="main-img">
+            <img src="./images of products/ashley chair 5/product 11.webp" alt="Ashley Accent Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Ashley Accent Chair</h4>
+          <p class="price">PKR 90,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+      <!-- ================== END ASHLEY ================== -->
+
+      <!-- ================== LA-Z-BOY CHAIRS (5 CARDS) ================== -->
+      
+      <!-- La-Z-Boy Chair 1 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="550">
+        <div class="product-card" data-brand="lazboy" data-price="85000" data-date="2025-01-12">
+          <span class="tag">Best Seller</span>
+          <div class="product-image">
+            <img src="./images of products/la z boy chair 1/product 11.jpg" alt="La-Z-Boy Executive Recliner" class="main-img">
+            <img src="./images of products/la z boy chair 1/product 12.gif" alt="La-Z-Boy Executive Recliner Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>La-Z-Boy Executive Recliner</h4>
+          <p class="price">PKR 85,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- La-Z-Boy Chair 2 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
+        <div class="product-card" data-brand="lazboy" data-price="95000" data-date="2025-01-20">
+          <span class="tag new">New</span>
+          <div class="product-image">
+            <img src="./images of products/la z boy chair 2/product 12.gif" alt="La-Z-Boy Rocker Chair" class="main-img">
+            <img src="./images of products/la z boy chair 2/product 11.jpg" alt="La-Z-Boy Rocker Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>La-Z-Boy Rocker Chair</h4>
+          <p class="price">PKR 95,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- La-Z-Boy Chair 3 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="650">
+        <div class="product-card" data-brand="lazboy" data-price="120000" data-date="2025-01-08">
+          <span class="tag sale">On Sale</span>
+          <div class="product-image">
+            <img src="./images of products/la z boy chair 3/product 12.gif" alt="La-Z-Boy Massage Recliner" class="main-img">
+            <img src="./images of products/la z boy chair 3/product 11.jpeg" alt="La-Z-Boy Massage Recliner Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>La-Z-Boy Massage Recliner</h4>
+          <p class="price">PKR 120,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- La-Z-Boy Chair 4 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="700">
+        <div class="product-card" data-brand="lazboy" data-price="105000" data-date="2025-01-24">
+          <div class="product-image">
+            <img src="./images of products/la z boy chair 4/product 11.jpeg" alt="La-Z-Boy Leather Recliner" class="main-img">
+            <img src="./images of products/la z boy chair 4/product 12.jpeg" alt="La-Z-Boy Leather Recliner Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>La-Z-Boy Leather Recliner</h4>
+          <p class="price">PKR 105,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- La-Z-Boy Chair 5 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="750">
+        <div class="product-card" data-brand="lazboy" data-price="80000" data-date="2025-01-03">
+          <span class="tag featured">Featured</span>
+          <div class="product-image">
+            <img src="./images of products/la z boy chair 5/product 11.jpg" alt="La-Z-Boy Comfort Plus" class="main-img">
+            <img src="./images of products/la z boy chair 5/product 12.jpg" alt="La-Z-Boy Comfort Plus Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>La-Z-Boy Comfort Plus</h4>
+          <p class="price">PKR 80,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+      <!-- ================== END LA-Z-BOY ================== -->
+
+      <!-- ================== WAYFAIR CHAIRS (5 CARDS) ================== -->
+      
+      <!-- Wayfair Chair 1 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="800">
+        <div class="product-card" data-brand="wayfair" data-price="50000" data-date="2025-01-17">
+          <span class="tag">Best Seller</span>
+          <div class="product-image">
+            <img src="./images of products/Wayfair Chair 1/product 11.jpg" alt="Wayfair Modern Lounge Chair" class="main-img">
+            <img src="./images of products/Wayfair Chair 1/product 12.jpg" alt="Wayfair Modern Lounge Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Wayfair Modern Lounge Chair</h4>
+          <p class="price">PKR 50,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- Wayfair Chair 2 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="850">
+        <div class="product-card" data-brand="wayfair" data-price="65000" data-date="2025-01-11">
+          <span class="tag new">New</span>
+          <div class="product-image">
+            <img src="./images of products/Wayfair Chair 2/product 11.jpg" alt="Wayfair Wooden Dining Chair" class="main-img">
+            <img src="./images of products/Wayfair Chair 2/product 12.jpg" alt="Wayfair Wooden Dining Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Wayfair Wooden Dining Chair</h4>
+          <p class="price">PKR 65,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- Wayfair Chair 3 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="900">
+        <div class="product-card" data-brand="wayfair" data-price="75000" data-date="2025-01-06">
+          <span class="tag sale">On Sale</span>
+          <div class="product-image">
+            <img src="./images of products/Wayfair Chair 3/product 11.jpg" alt="Wayfair Accent Chair" class="main-img">
+            <img src="./images of products/Wayfair Chair 3/product 12.jpg" alt="Wayfair Accent Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Wayfair Accent Chair</h4>
+          <p class="price">PKR 75,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- Wayfair Chair 4 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="950">
+        <div class="product-card" data-brand="wayfair" data-price="85000" data-date="2025-01-26">
+          <div class="product-image">
+            <img src="./images of products/Wayfair Chair 4/product 11.jpg" alt="Wayfair Executive Office Chair" class="main-img">
+            <img src="./images of products/Wayfair Chair 4/product 12.jpg" alt="Wayfair Executive Office Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Wayfair Executive Office Chair</h4>
+          <p class="price">PKR 85,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- Wayfair Chair 5 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1000">
+        <div class="product-card" data-brand="wayfair" data-price="60000" data-date="2025-01-19">
+          <span class="tag featured">Featured</span>
+          <div class="product-image">
+            <img src="./images of products/Wayfair Chair 5/product 11.jpg" alt="Wayfair Classic Armchair" class="main-img">
+            <img src="./images of products/Wayfair Chair 5/product 12.jpg" alt="Wayfair Classic Armchair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Wayfair Classic Armchair</h4>
+          <p class="price">PKR 60,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+      <!-- ================== END WAYFAIR ================== -->
+
+      <!-- ================== POTTERY BARN CHAIRS (5 CARDS) ================== -->
+      
+      <!-- Pottery Barn Chair 1 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1050">
+        <div class="product-card" data-brand="potterybarn" data-price="100000" data-date="2025-01-13">
+          <span class="tag">Best Seller</span>
+          <div class="product-image">
+            <img src="./images of products/potterybarn Chair 1/product 11.jpg" alt="Pottery Barn Wingback Chair" class="main-img">
+            <img src="./images of products/potterybarn Chair 1/product 12.jpg" alt="Pottery Barn Wingback Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Pottery Barn Wingback Chair</h4>
+          <p class="price">PKR 100,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- Pottery Barn Chair 2 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1100">
+        <div class="product-card" data-brand="potterybarn" data-price="115000" data-date="2025-01-21">
+          <span class="tag new">New</span>
+          <div class="product-image">
+            <img src="./images of products/potterybarn Chair 2/product 11.jpg" alt="Pottery Barn Classic Chair" class="main-img">
+            <img src="./images of products/potterybarn Chair 2/product 12.jpg" alt="Pottery Barn Classic Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Pottery Barn Classic Chair</h4>
+          <p class="price">PKR 115,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- Pottery Barn Chair 3 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1150">
+        <div class="product-card" data-brand="potterybarn" data-price="125000" data-date="2025-01-07">
+          <span class="tag sale">On Sale</span>
+          <div class="product-image">
+            <img src="./images of products/potterybarn Chair 3/product 11.jpg" alt="Pottery Barn Leather Armchair" class="main-img">
+            <img src="./images of products/potterybarn Chair 3/product 12.jpg" alt="Pottery Barn Leather Armchair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Pottery Barn Leather Armchair</h4>
+          <p class="price">PKR 125,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+
+      <!-- Pottery Barn Chair 4 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1200">
+        <div class="product-card" data-brand="potterybarn" data-price="140000" data-date="2025-01-27">
+          <div class="product-image">
+            <img src="./images of products/potterybarn Chair 4/product 11.jpg" alt="Pottery Barn Tufted Chair" class="main-img">
+            <img src="./images of products/potterybarn Chair 4/product 12.jpg" alt="Pottery Barn Tufted Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Pottery Barn Tufted Chair</h4>
+          <p class="price">PKR 140,000</p>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+
+      <!-- Pottery Barn Chair 5 -->
+      <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1250">
+        <div class="product-card" data-brand="potterybarn" data-price="110000" data-date="2025-01-04">
+          <span class="tag featured">Featured</span>
+          <div class="product-image">
+            <img src="./images of products/potterybarn Chair 5/product 11.jpg" alt="Pottery Barn Designer Chair" class="main-img">
+            <img src="./images of products/potterybarn Chair 5/product 11.jpg" alt="Pottery Barn Designer Chair Hover" class="hover-img">
+          </div>
+          <div class="action-icons">
+            <button class="add-to-wishlist"><i class="fas fa-heart"></i></button>
+            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+            <button class="quick-view" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fas fa-eye"></i></button>
+          </div>
+          <h4>Pottery Barn Designer Chair</h4>
+          <p class="price">PKR 110,000</p>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+      <!-- ================== END POTTERY BARN ================== -->
+      <!-- ================== END ================== -->
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ====== QUICK VIEW MODAL (works for all cards) ====== -->
+<div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Product Name</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body d-flex flex-column flex-md-row">
+        <!-- Left: Image -->
+        <div class="modal-img flex-fill text-center mb-3 mb-md-0">
+          <img src="https://source.unsplash.com/600x600/?chair" alt="Chair Preview" class="img-fluid rounded">
+        </div>
+        <!-- Right: Info -->
+        <div class="modal-info flex-fill ps-md-4">
+          <p><strong>Brand:</strong> —</p>
+          <p><strong>Price:</strong> —</p>
+          <p><strong>Available Since:</strong> —</p>
+          <p>Comfortable, stylish and durable chair perfect for your living space.</p>
+          <div class="mt-3">
+            <button class="btn btn-warning">Add to Cart</button>
+            <button class="btn btn-outline-danger">Add to Wishlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <!-- ====== PROMO BANNER (optional) ====== -->
+  <section class="promo-banner text-center text-white" data-aos="zoom-in">
+    <div class="container">
+      <h3>Special: 15% OFF on Selected Chairs</h3>
+      <a href="offers.html" class="btn btn-warning mt-3">Shop Chairs Deals</a>
+    </div>
+  </section>
+
+  <!-- ====== PAGINATION ====== -->
+  <section class="pagination-section py-4">
+    <div class="container d-flex justify-content-center">
+      <nav>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next →</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER (constant) ====== -->
+  <footer class="footer">
+    <div class="footer-container text-center">
+      <h3>Urban Sofa</h3>
+      <p>Premium quality sofas & chairs designed for comfort & style.</p>
+      <p>&copy; 2025 Urban Sofa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Page JS -->
+  <script src="./js/chair/chair.js"></script>
+</body>
+</html>

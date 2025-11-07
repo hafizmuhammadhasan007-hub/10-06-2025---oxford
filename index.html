@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxford Sofa - Premium Furniture Store</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/responsive.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
+
+
+
+</head>
+<body>
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">URBAN SOFA</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav mx-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="product.html">Products</a>
+        </li>
+         
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="brands.html" id="brandsDropdown" role="button" data-bs-toggle="dropdown">
+            Brands
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="products.html?brand=ikea">IKEA</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=ashley">Ashley Furniture</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=lazboy">La-Z-Boy</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=wayfair">Wayfair</a></li>
+            <li><a class="dropdown-item" href="products.html?brand=potterybarn">Pottery Barn</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="compare.html">Compare</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html#company">Company Intro</a></li>
+            <li><a class="dropdown-item" href="about.html#types">Sofa Types</a></li>
+            <li><a class="dropdown-item" href="about.html#location">Shop Location</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Feedback</a>
+        </li>
+      </ul>
+
+      <div class="navbar-icons d-flex">
+        <a href="wishlist.html" class="nav-icon"><i class="fas fa-heart"></i></a>
+        <a href="cart.html" class="nav-icon"><i class="fas fa-shopping-cart"></i></a>
+        <a href="login.html" class="nav-icon"><i class="fas fa-user"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="./videos/8580866-hd_1920_1080_30fps.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>We Serve <span class="word-box"><span id="changing-word">QUALITY</span></span></h1>
+    <p>Premium comfort, timeless design, made just for you.</p>
+    <div class="hero-buttons">
+      <a href="#" class="btn btn-primary">Shop Now</a>
+      <a href="#" class="btn btn-outline-light">Explore Collection</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="usp py-5">
+  <div class="container text-center">
+    <h2 class="section-title" data-aos="fade-up" >Why Choose Us?</h2>
+    <div class="row g-4">
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="0">
+        <div class="usp-card">
+          <img src="./icons/icons8-award-64.png" alt="Premium Quality" class="usp-icon-filled">
+          <h5>Premium Quality</h5>
+          <p>Crafted with the finest materials for lasting comfort.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="usp-card">
+          <img src="./icons/icons8-delivery-van-66.png" alt="Free Delivery" class="usp-icon-filled">
+          <h5>Free Delivery</h5>
+          <p>Fast and free doorstep delivery across the country.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="usp-card">
+          <img src="./icons/icons8-design-48.png" alt="Custom Designs" class="usp-icon-filled">
+          <h5>Custom Designs</h5>
+          <p>Personalize your sofa to match your unique style.</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="usp-card">
+          <img src="./icons/icons8-warranty-48 (1).png" alt="Warranty" class="usp-icon-filled">
+          <h5>Warranty</h5>
+          <p>All products come with a trusted warranty guarantee.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="categories py-5" id="categories">
+  <div class="container-fluid px-0">
+    <h2 class="section-title text-center mb-5" data-aos="fade-up">Explore Our Categories</h2>
+    
+    <div class="category-row">
+      <div class="category-block left-slide" data-aos="fade-right" data-aos-delay="0">
+        <div class="category-bg luxury-bg"></div>
+        <div class="category-content">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                <div class="category-image">
+                  <img src="https://media.istockphoto.com/id/926239100/photo/black-classic-interior.webp?a=1&b=1&s=612x612&w=0&k=20&c=ONqGZphnrSF-WtqYJ2VOeg61AqcYJUuCgsuA133kKps=" alt="Luxury Sofas">
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                <div class="category-text">
+                  <h3>Luxury Sofas</h3>
+                  <p>Experience unparalleled comfort with our premium collection of luxury sofas, crafted with the finest materials and exquisite attention to detail.</p>
+                  <a href="products.html?category=luxury" class="category-btn">Explore Luxury</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-row">
+      <div class="category-block right-slide" data-aos="fade-left" data-aos-delay="0">
+        <div class="category-bg office-bg"></div>
+        <div class="category-content">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-delay="200">
+                <div class="category-image">
+                  <img src="https://i.pinimg.com/236x/1e/13/ff/1e13ffc7ccefe0b1e198aaa65f93d382.jpg" alt="Office Sofas">
+                </div>
+              </div>
+              <div class="col-md-6 order-md-1" data-aos="fade-right" data-aos-delay="400">
+                <div class="category-text text-md-end">
+                  <h3>Office Sofas</h3>
+                  <p>Professional and comfortable seating solutions designed for productivity and style in modern workspace environments.</p>
+                  <a href="products.html?category=office" class="category-btn">Explore Office</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-row">
+      <div class="category-block left-slide" data-aos="fade-right" data-aos-delay="0">
+        <div class="category-bg hotel-bg"></div>
+        <div class="category-content">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                <div class="category-image">
+                  <img src="https://media.istockphoto.com/id/2192838435/photo/airport-luxury-lounge-with-empty-seats-bar-counter-and-pendant-lights.webp?a=1&b=1&s=612x612&w=0&k=20&c=W_SAwJem5U9OcKvmD8xho_-WZBqMKJlsRaanZbkVnTk=" alt="Hotel Sofas">
+                </div>
+              </div>
+              <div class="col-md-6" data-aos="fade-left" data-aos-delay="400">
+                <div class="category-text">
+                  <h3>Hotel Sofas</h3>
+                  <p>Durable and elegant sofas built for hospitality environments, combining comfort with commercial-grade durability.</p>
+                  <a href="products.html?category=hotel" class="category-btn">Explore Hotel</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="category-row">
+      <div class="category-block right-slide" data-aos="fade-left" data-aos-delay="0">
+        <div class="category-bg home-bg"></div>
+        <div class="category-content">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-md-6 order-md-2" data-aos="fade-left" data-aos-delay="200">
+                <div class="category-image">
+                  <img src="https://i.pinimg.com/236x/1f/61/df/1f61df53977d67986e750d3df08cef0c.jpg" alt="Home Sofas">
+                </div>
+              </div>
+              <div class="col-md-6 order-md-1" data-aos="fade-right" data-aos-delay="400">
+                <div class="category-text text-md-end">
+                  <h3>Home Sofas</h3>
+                  <p>Cozy and versatile seating options perfect for family living rooms, offering both style and everyday comfort.</p>
+                  <a href="products.html?category=home" class="category-btn">Explore Home</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="height:100px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="products" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up"> Featured Products</h2>
+    <div class="row g-4">
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-right">
+        <div class="product-card">
+          <span class="tag best-seller">Best Seller</span>
+          <img src="./images/product 11.jpeg" alt="Luxury Sofa">
+          <h3>Luxury Sofa</h3>
+          <p class="price">$899</p>
+          <div class="actions">
+            <button class="wishlist-btn" onclick="addToWishlist('Luxury Sofa')">
+              ❤️ Wishlist
+            </button>
+            <button class="cart-btn" onclick="addToCart('Luxury Sofa')">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up">
+        <div class="product-card">
+          <span class="tag new">New</span>
+          <img src="./images/product 21.jpg" alt="Modern Recliner">
+          <h3>Modern Recliner</h3>
+          <p class="price">$699</p>
+          <div class="actions">
+            <button class="wishlist-btn" onclick="addToWishlist('Modern Recliner')">
+              ❤️ Wishlist
+            </button>
+            <button class="cart-btn" onclick="addToCart('Modern Recliner')">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up">
+        <div class="product-card">
+          <span class="tag sale">On Sale</span>
+          <img src="./images/product 31.webp" alt="Elegant Chair">
+          <h3>Elegant Chair</h3>
+          <p class="price"><span class="old-price">$499</span> $349</p>
+          <div class="actions">
+            <button class="wishlist-btn" onclick="addToWishlist('Elegant Chair')">
+              ❤️ Wishlist
+            </button>
+            <button class="cart-btn" onclick="addToCart('Elegant Chair')">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-left">
+        <div class="product-card">
+          <span class="tag best-seller">Best Seller</span>
+          <img src="./images/product 41.jpg" alt="Outdoor Sofa">
+          <h3>Outdoor Sofa Set</h3>
+          <p class="price">$999</p>
+          <div class="actions">
+            <button class="wishlist-btn" onclick="addToWishlist('Outdoor Sofa Set')">
+              ❤️ Wishlist
+            </button>
+            <button class="cart-btn" onclick="addToCart('Outdoor Sofa Set')">
+              🛒 Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="cart-popup" class="popup center">✅ Item added to Cart</div>
+<div id="wishlist-popup" class="popup right">❤️ Added to Wishlist</div>
+
+
+
+
+<div style="height:100px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+<section id="promo-banner" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Special Offers</h2>
+    <div class="row g-4">
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-right">
+        <div class="promo-card">
+          <img src="./images/promo11.webp" alt="Autumn Sale">
+          <div class="promo-content">
+            <h3>Autumn Sale</h3>
+            <p>Up to 40% OFF</p>
+            <a href="#" class="promo-btn">Shop Now</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up">
+        <div class="promo-card">
+          <img src="./images/promo21.webp" alt="Weekend Deals">
+          <div class="promo-content">
+            <h3>Weekend Deals</h3>
+            <p>Flat 25% OFF</p>
+            <a href="#" class="promo-btn">Explore</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-up">
+        <div class="promo-card">
+          <img src="./images/promo31.webp" alt="New Arrivals">
+          <div class="promo-content">
+            <h3>New Arrivals</h3>
+            <p>Fresh Collection</p>
+            <a href="#" class="promo-btn">Discover</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6" data-aos="fade-left">
+        <div class="promo-card">
+          <img src="./images/promo41.webp" alt="Clearance Sale">
+          <div class="promo-content">
+            <h3>Clearance Sale</h3>
+            <p>Up to 50% OFF</p>
+            <a href="#" class="promo-btn">Grab Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<div style="height:100px;"></div>
+
+
+
+
+
+
+
+
+
+<section class="testimonials" id="testimonials">
+  <div class="section-heading" data-aos="fade-up">
+    <h2>What Our Customers Say</h2>
+    <p>Real experiences from our happy clients</p>
+  </div>
+
+  <div class="testimonial-cards">
+    <div class="testimonial-card" data-aos="fade-right">
+      <div class="testimonial-header">
+        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Customer">
+        <div>
+          <h3>Sarah Khan</h3>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+      <p class="review">"Urban Sofa transformed my living room! The quality is top-notch and delivery was super fast."</p>
+      <p class="time">2 days ago</p>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-left">
+      <div class="testimonial-header">
+        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Customer">
+        <div>
+          <h3>Ali Raza</h3>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+      <p class="review">"I ordered a custom sofa and it was exactly as I imagined. Highly recommend Urban Sofa!"</p>
+      <p class="time">3 days ago</p>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-right">
+      <div class="testimonial-header">
+        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Customer">
+        <div>
+          <h3>Maria Ahmed</h3>
+          <p class="stars">★★★★☆</p>
+        </div>
+      </div>
+      <p class="review">"Good service and comfortable sofas. Could improve packaging but overall satisfied."</p>
+      <p class="time">1 week ago</p>
+    </div>
+
+    <div class="testimonial-card" data-aos="fade-left">
+      <div class="testimonial-header">
+        <img src="https://randomuser.me/api/portraits/men/60.jpg" alt="Customer">
+        <div>
+          <h3>Usman Tariq</h3>
+          <p class="stars">★★★★★</p>
+        </div>
+      </div>
+      <p class="review">"Excellent customer support! They helped me pick the perfect sofa for my office."</p>
+      <p class="time">2 weeks ago</p>
+    </div>
+  </div>
+
+  <div class="testimonial-btn" data-aos="zoom-in">
+    <a href="testimonials.html" class="btn">Read More Testimonials</a>
+  </div>
+</section>
+
+
+
+
+<div style="height:100px;"></div>
+
+
+
+
+
+
+
+<section class="brands" id="brands">
+  <div class="section-heading" data-aos="fade-up">
+    <h2>Our Trusted Sofa Brands</h2>
+    <p>We partner with the world's best furniture makers</p>
+  </div>
+
+  <div class="brand-logos">
+    <div class="brand-logo" data-aos="zoom-in">
+      <img src="./images/ikea.svg" alt="IKEA">
+    </div>
+    <div class="brand-logo" data-aos="zoom-in" data-aos-delay="200">
+      <img src="./images/Ashley_logo_2022.svg" alt="Ashley Furniture">
+    </div>
+    <div class="brand-logo" data-aos="zoom-in" data-aos-delay="400">
+      <img src="./images/La-Z-Boy_2025.svg.png" alt="La-Z-Boy">
+    </div>
+    <div class="brand-logo" data-aos="zoom-in" data-aos-delay="600">
+      <img src="./images/Wayfair_logo_with_tagline.png" alt="Wayfair">
+    </div>
+    <div class="brand-logo" data-aos="zoom-in" data-aos-delay="800">
+      <img src="./images/pottery-barn-logo-svg-vector.svg" alt="Pottery Barn">
+    </div>
+  </div>
+</section>
+
+
+
+
+<div style="height:100px;"></div>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-about">
+      <h3>Urban Sofa</h3>
+      <p>Premium quality sofas and furniture designed to bring comfort & style into your home. Trusted by thousands of happy customers.</p>
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="brands.html">Brands</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Customer Care</h4>
+      <ul>
+        <li><a href="#">Shipping & Returns</a></li>
+        <li><a href="#">Warranty</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-newsletter">
+      <h4>Stay Updated</h4>
+      <p>Subscribe to receive updates, special offers & more.</p>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Urban Sofa. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+
+  <script src="/js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="./js/index.js"></script>
+
+
+</body>
+</html>

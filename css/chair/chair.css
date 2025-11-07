@@ -1,0 +1,402 @@
+/* ===== chairs.css ===== */
+
+/* Body + font */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+  background: transparent;
+  transition: background 0.4s ease;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+.custom-navbar.scrolled {
+  background: #111; /* Solid black when scrolled */
+}
+
+/* Logo */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f4b400 !important; /* UrbanSofa Yellow */
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1) rotate(-2deg);
+  color: #fff !important;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  margin: 0 12px;
+  font-weight: 500;
+  color: #fff !important;
+  position: relative;
+  opacity: 0; /* hidden initially for animation */
+  transform: translateY(-15px);
+  animation: slideIn 0.6s forwards;
+}
+
+.navbar-nav .nav-link:nth-child(1) { animation-delay: 0.2s; }
+.navbar-nav .nav-link:nth-child(2) { animation-delay: 0.4s; }
+.navbar-nav .nav-link:nth-child(3) { animation-delay: 0.6s; }
+.navbar-nav .nav-link:nth-child(4) { animation-delay: 0.8s; }
+.navbar-nav .nav-link:nth-child(5) { animation-delay: 1s; }
+.navbar-nav .nav-link:nth-child(6) { animation-delay: 1.2s; }
+.navbar-nav .nav-link:nth-child(7) { animation-delay: 1.4s; }
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f4b400 !important;
+  transition: color 0.3s ease;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown-menu .dropdown-item {
+  color: #333;
+  transition: all 0.3s;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background: #f4b400;
+  color: #fff;
+}
+
+/* Right Icons */
+.navbar-icons .nav-icon {
+  margin-left: 18px;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  opacity: 0; /* hidden initially */
+  transform: translateY(-10px);
+  animation: slideIn 0.6s forwards;
+}
+
+.navbar-icons .nav-icon:nth-child(1) { animation-delay: 1.6s; }
+.navbar-icons .nav-icon:nth-child(2) { animation-delay: 1.8s; }
+.navbar-icons .nav-icon:nth-child(3) { animation-delay: 2s; }
+
+.navbar-icons .nav-icon:hover {
+  color: #f4b400;
+  transform: translateY(-3px);
+}
+
+/* Navbar link animation */
+.animated-link {
+  opacity: 0;
+  transform: translateY(-15px);
+  animation: slideIn 0.6s forwards;
+}
+
+.animated-icon {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: slideIn 0.6s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Hero */
+.chair-hero {
+  background: url("./images.jpeg") center/cover no-repeat;
+  padding: 110px 20px 60px;
+  margin-top: 70px;
+  color: #fff;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.45);
+  background-color: black;
+}
+
+.spacer { height: 30px; }
+
+/* Filter bar */
+.filter-bar {
+  background: transparent;
+}
+.search-box {
+  width: 300px;
+  border-radius: 30px;
+  padding: 10px 16px;
+  border: 1px solid #e6e6e6;
+  transition: all 0.3s ease;
+}
+.search-box:focus {
+  border-color: #f4b400;
+  box-shadow: 0 0 8px rgba(244,180,0,0.3);
+}
+.select-pill {
+  border-radius: 30px;
+  padding: 8px 14px;
+  border: 1px solid #e6e6e6;
+  transition: all 0.3s ease;
+}
+.select-pill:hover {
+  border-color: #f4b400;
+}
+
+/* Product cards */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding-bottom: 12px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+.product-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 12px 0 6px;
+}
+.product-card .price {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.product-card .stars {
+  color: #ffb400;
+  font-size: 14px;
+}
+
+/* Tag */
+.product-card .tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  color: #fff;
+  z-index: 5;
+}
+.product-card .tag.new { background: #27ae60; }
+.product-card .tag.sale { background: #e63946; }
+.product-card .tag.featured { background: #f4b400; color: #111; }
+.product-card .tag { background: #111; }
+
+/* Images */
+.product-image {
+  position: relative;
+  height: 240px;
+  background: #fff;
+}
+.product-image img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  transition: opacity 0.4s ease;
+}
+.product-image .hover-img { opacity: 0; }
+.product-card:hover .main-img { opacity: 0; }
+.product-card:hover .hover-img { opacity: 1; }
+
+/* Action icons */
+.action-icons {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 6;
+}
+.action-icons button {
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.action-icons button:hover {
+  background: #f4b400;
+  color: #111;
+}
+
+/* Promo Banner */
+.promo-banner {
+  background: url("https://source.unsplash.com/1200x350/?chair,sofa") center/cover no-repeat;
+  padding: 60px 20px;
+  margin-top: 30px;
+  color: #fff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+
+/* Pagination */
+.pagination .page-link {
+  border-radius: 8px;
+  margin: 0 4px;
+}
+.pagination .page-link:hover {
+  background: #f4b400;
+  color: #fff;
+}
+
+
+
+
+
+
+/* Add to chair.css */
+
+/* Image Slider Styles */
+.image-slider {
+  position: relative;
+}
+
+.slider-main {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider-main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slider-main img.active-slide {
+  opacity: 1;
+}
+
+.slider-thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.thumb-btn {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 2px;
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.thumb-btn.active {
+  border-color: #f4b400;
+}
+
+.thumb-btn img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Modal Enhancements */
+.modal-info .product-details {
+  font-size: 14px;
+}
+
+.modal-info .brand-name {
+  color: #f4b400;
+  font-weight: 600;
+}
+
+.modal-info .product-price {
+  color: #e63946;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.modal-info .status {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.available { background: #27ae60; color: white; }
+.status.sale { background: #e63946; color: white; }
+.status.new { background: #3498db; color: white; }
+.status.bestseller { background: #f39c12; color: white; }
+.status.featured { background: #9b59b6; color: white; }
+
+.modal-info .rating {
+  color: #ffb400;
+}
+
+.modal-info .description {
+  color: #666;
+  line-height: 1.5;
+}
+
+.product-features ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.product-features li {
+  color: #555;
+  margin-bottom: 3px;
+}
+
+/* Button enhancements */
+.btn-lg {
+  padding: 12px 20px;
+  font-size: 16px;
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+  .modal-body {
+    flex-direction: column;
+  }
+  
+  .slider-main {
+    height: 250px;
+  }
+}

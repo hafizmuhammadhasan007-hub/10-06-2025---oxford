@@ -1,0 +1,203 @@
+/* Hero Section */
+.product-hero {
+  background: url("https://media.istockphoto.com/id/2185177891/photo/boho-inspired-modern-scandinavian-interior-with-wicker-furniture-and-green-plants.webp?a=1&b=1&s=612x612&w=0&k=20&c=19qVlPesqUUTS5NA2yogr3yIgzji-NrnXcircM0pkhk=") center/cover no-repeat;
+  padding: 120px 20px;
+  margin-top: 70px;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+}
+
+
+
+
+/* Filter Bar */
+.filter-bar {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+/* Search Bar */
+#search {
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+#search:focus {
+  border-color: #f4b400;
+  box-shadow: 0 0 8px rgba(244, 180, 0, 0.5);
+  outline: none;
+}
+
+/* Dropdowns */
+.filter-bar select {
+  border-radius: 30px;
+  padding: 8px 18px;
+  font-size: 14px;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+.filter-bar select:hover {
+  border-color: #f4b400;
+  background: #fffbe6;
+  cursor: pointer;
+}
+
+/* Alignments */
+.filter-bar .form-select,
+.filter-bar #search {
+  max-width: 100%;
+}
+
+
+
+
+/* Product Cards - Image Hover Effect */
+.product-card .image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-card .default-img,
+.product-card .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.product-card .default-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.product-card .hover-img {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.product-card:hover .default-img {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.product-card:hover .hover-img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Rest of your existing CSS remains the same */
+/* Product Card */
+.product-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  transition: transform 0.3s;
+}
+.product-card:hover { transform: translateY(-8px); }
+
+/* Tag */
+.product-card .tag {
+  position: absolute;
+  top: 10px; left: 10px;
+  background: #111; color: #fff;
+  padding: 4px 10px; border-radius: 6px;
+  font-size: 12px;
+  z-index: 5;
+}
+.product-card .tag.sale { background: red; }
+.product-card .tag.new { background: green; }
+.product-card .tag.featured { background: #f4b400; }
+
+/* Product Images */
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.4s ease-in-out;
+  position: absolute;
+  top: 0; left: 0;
+}
+.product-image .hover-img { opacity: 0; }
+.product-card:hover .main-img { opacity: 0; }
+.product-card:hover .hover-img { opacity: 1; }
+
+/* Action Icons (top-right) */
+.action-icons {
+  position: absolute;
+  top: 10px; right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 5;
+}
+.action-icons button {
+  background: #fff;
+  border: none;
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.action-icons button:hover { background: #f4b400; color: #fff; }
+
+/* Product Info */
+.product-card h4 { margin: 15px 0 5px; font-size: 16px; font-weight: 600; }
+.product-card .price { font-weight: 600; color: #111; }
+.product-card .stars { color: #ffb400; margin: 5px 0; font-size: 14px; }
+
+
+
+
+
+
+/* Promotion Banner */
+.promo-banner {
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200') center/cover no-repeat;
+  padding: 60px 20px;
+  opacity: calc(100%);
+}
+.promo-banner h2 { font-size: 28px; font-weight: 700; }
+
+/* Pagination */
+.pagination .page-link {
+  color: #111; border-radius: 6px; margin: 0 3px;
+}
+.pagination .page-link:hover {
+  background: #f4b400; color: #fff;
+}
+
+/* Footer */
+.footer { background: #111; color: #fff; padding: 20px; }
+
+
+
+
+
+
+
+
+
+
